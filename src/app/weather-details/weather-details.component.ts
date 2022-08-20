@@ -2,13 +2,13 @@ import { Component, OnChanges, Input } from '@angular/core';
 import { WeatherInfo } from '../data';
 @Component({
   selector: 'my-weather-details',
-  templateUrl: './weather-detail.component.html',
-  styleUrls: ['./weather-detail.component.scss'],
+  templateUrl: './weather-details.component.html',
+  styleUrls: ['./weather-details.component.css'],
 })
 export class WeatherDetailComponent implements OnChanges {
-  @Input() weather: WeatherInfo;
+  @Input() cityWeather: WeatherInfo;
 
   public ngOnChanges(): void {
-    console.log('weather', this.weather);
+    console.log('weather', this.cityWeather);
   }
 }

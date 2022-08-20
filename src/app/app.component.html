@@ -1,2 +1,9 @@
 <label>Enter City:</label>
-<input data-test-id="app-input" type="text" [(ngModel)]="searchKey" (ngModelChange)="search()"/>
+<input
+  data-test-id="app-input"
+  type="text"
+  [(ngModel)]="searchKey"
+  (ngModelChange)="search()"
+/>
+
+<my-weather-details [cityWeather]="cityWeather"></my-weather-details>
