@@ -1,9 +1,18 @@
-<label>Enter City:</label>
-<input
-  data-test-id="app-input"
-  type="text"
-  [(ngModel)]="searchKey"
-  (ngModelChange)="search()"
-/>
+<div class="search-container">
+  <div>
+    <label>Enter City:</label>
+    <input
+      data-test-id="app-input"
+      type="text"
+      [(ngModel)]="searchKey"
+      (ngModelChange)="search()"
+    />
+  </div>
+</div>
+<ng-container *ngIf="!cityWeather && searchKey; else result">
+  <div data-test-id="no-results">No Results Found</div>
+</ng-container>
 
-<my-weather-details [cityWeather]="cityWeather"></my-weather-details>
+<ng-template #result>
+  <my-weather-details [cityWeather]="cityWeather"></my-weather-details>
+</ng-template>

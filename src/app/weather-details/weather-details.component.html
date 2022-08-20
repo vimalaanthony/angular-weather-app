@@ -1,0 +1,20 @@
+<!-- <ng-container *ngIf="cityWeather; else notFound">
+  
+  </ng-container> -->
+<div class="search-warapper">
+  <div class="weather-info" *ngIf="cityWeather" data-test-id="weather-details">
+    <div class="left-col">
+      <span data-test-id="output-temperature">{{
+        cityWeather?.temperature
+      }}</span>
+    </div>
+    <div class="right-col">
+      <div class="top" data-test-id="output-wind">
+        Wind: {{ cityWeather?.wind }}
+      </div>
+      <div class="bottom" data-test-id="output-humidity">
+        Humidity: {{ cityWeather?.humidity }}
+      </div>
+    </div>
+  </div>
+</div>

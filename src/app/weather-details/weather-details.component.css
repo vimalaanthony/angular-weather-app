@@ -1,0 +1,41 @@
+.search-warapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+}
+.weather-info {
+  display: flex;
+  align-items: center;
+  /* justify-content: left; */
+  width: 500px;
+  height: 100px;
+  background-color: brown;
+}
+
+.left-col {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+}
+.right-col {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: space-around; */
+}
+
+.top {
+  flex: 50%;
+  /* padding: 10% 0; */
+  justify-content: space-around;
+}
+
+.bottom {
+  /* background-color: forestgreen; */
+  justify-content: space-around;
+  /* padding: 10% 0; */
+  flex: 50%;
+}
